@@ -10,8 +10,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf build && cd ../nachoeduca && npm run build && cp -r build ../nachoeducabackend",
-    "deploy-full": "npm run build && npm run build:ui && git add . && git commit -m 'deploy' && git push origin main"
+    "build:ui": "rm -rf dist && cd ../nachoeduca && npm run build && cp -r dist ../nachoeducabackend",
+    "deploy-full": "npm run build:ui && npm run build:ui && git add . && git commit -m 'deploy' && git push origin main"
   },
   "dependencies": {
     "cors": "^2.8.5",
